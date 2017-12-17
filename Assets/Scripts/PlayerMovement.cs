@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        //Vector2 movement_vector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         Vector2 movement_vector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
         if (movement_vector != Vector2.zero)
@@ -31,7 +32,7 @@ public class PlayerMovement : MonoBehaviour {
             anim.SetBool("iswalking", false);
         }
 
-        rbody.MovePosition(rbody.position + movement_vector * Time.deltaTime);
-
-	}
+        //rbody.MovePosition(rbody.position + movement_vector * Time.deltaTime);
+        rbody.MovePosition(rbody.position + movement_vector / 24);
+    }
 }
