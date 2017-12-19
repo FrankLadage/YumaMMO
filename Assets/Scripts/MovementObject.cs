@@ -6,11 +6,7 @@ public abstract class MovementObject : MonoBehaviour {
 
     Animator anim;
 
-    public Vector2 targetPosition;
-
-    //Movement Speed
-    //public float moveTime = 0.1f;
-
+    private Vector2 targetPosition;
 
 
 
